@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include 'classes/newClass.inc.php';
+    ?>
     
 </body>
 </html>
