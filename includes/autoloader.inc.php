@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register('autoLoadFunc');
 
-function autoLoadFunc($className)
+function autoLoadFunc(string $className)
 {
     $path = "classes/";
     $extension = ".class.php";

@@ -1,3 +1,6 @@
+<?php 
+    declare(strict_types = 1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +14,18 @@
 
     <?php
     include 'includes/autoloader.inc.php';
-    $person = new Person\Person('Alberto', 'Malhado', '33');
-    var_dump($person->getPersonData());
-    $house = new House('Av. Liberdade', '33', '4000-200');
-    var_dump($house->getHouseData());
+    try{
+        $person = new Person\Person('Alberto', 'Malhado', 33);
+        var_dump($person->getPersonData());
+    } catch (TypeError $e){
+        echo "ERROR: {$e->getMessage()}";
+    }
+    try{
+        $house = new House('Av. Liberdade', 33, '4000-200');
+        var_dump($house->getHouseData());
+    } catch (TypeError $e){
+        echo "ERROR: {$e->getMessage()}";
+    }
     ?>
 
 </body>
