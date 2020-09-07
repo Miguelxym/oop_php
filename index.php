@@ -26,6 +26,13 @@
     } catch (TypeError $e){
         echo "ERROR: {$e->getMessage()}";
     }
+
+    include_once "includes/dbh.inc.php";
+    include_once "includes/users.inc.php";
+    include_once "includes/viewusers.inc.php";
+
+    $users = new ViewUsers();
+    $users->showAllUsers();
     ?>
 
 </body>

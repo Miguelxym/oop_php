@@ -26,4 +26,10 @@ class Person
     {
         return $this;
     }
+
+    // protected function getAllUsers()
+    // {
+    //     $sql = "SELECT * FROM users";
+    //     $result = $this->connect()->query($sql);
+    // }
 }
