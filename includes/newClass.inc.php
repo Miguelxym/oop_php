@@ -59,7 +59,7 @@ class Dog extends Person
 
     private function fn_private_ex()
     {
-        $this->fn_private();
+        //$this->fn_private();
     }
 }
 
@@ -74,7 +74,7 @@ class Food
         $this->recipe = $recipe;
     }
 
-    public function setFoodData()
+    public function setFoodData($name, $recipe)
     {
         $this->name = $name;
         $this->recipe = $recipe;
